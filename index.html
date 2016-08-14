@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<title>Basic Client List</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+	<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+	<script src="js/clientApp.js"></script>
+	
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/clientapp.css" /
+</head>
+<body>
+	<div class="bodywrapper" ng-app="clientApp">
+		<div class="displaywrapper" ng-controller="clientAppController">
+			<h1>Basic Email List:</h1>
+			<div class="emaillist">
+				<div class="sectionheader">
+					<div class="col">Date added</div>
+					<div class="col">Name</div>
+					<div class="col">Email</div>
+				</div>
+				<ul>
+					<li ng-repeat='client in clients track by $index'>
+						<div class="col">{{$index + 1}}. {{ client.Date | date:'MMMM d, y' }} </div>
+						<div class="col">{{ client.Name }}</div>
+						<div class="col">{{ client.Email }} </div>
+					</li>
+				</ul>
+			</div>
+			<!-- Email Display ends -->
+			<div class="submitwrapper">
+				<button type="button" class="btn btn-primary" ng-click="open()">Add Email</button>
+			</div>
+			<!-- Email Form Trigger Ends -->
+		</div>
+	</div>
+</body>
+</html>

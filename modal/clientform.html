@@ -1,0 +1,24 @@
+<div class="formwrapper">
+	<h2>Please enter following Information:</h2>
+	<form name="clientForm" novalidate>
+		<div class="col">
+			Name: <input type="text" name="name" ng-model="name" placeholder="Enter Name" required />
+			<span class="errormsg" ng-show = "clientForm.name.$dirty && clientForm.name.$invalid">
+				<span ng-show = "clientForm.name.$error.required">Name is required.</span>
+			</span>
+		</div>
+		<div class="col">
+			Email: <input type="email" name="email" ng-model="email" placeholder="Enter Email" required /> 
+			<span class="errormsg" ng-show="clientForm.email.$dirty && clientForm.email.$invalid">
+				<span ng-show="clientForm.email.$error.required">Email is required</span>
+				<span ng-show="clientForm.email.$error.email">Not a valid email</span>
+			</span>
+		</div>
+	</form>
+</div>
+<!-- Client Form area ends -->
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-disabled="clientForm.name.$invalid || clientForm.email.$invalid" ng-click="submit()">Submit</button>
+	<button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+</div>
+<!-- Client Form footer ends -->

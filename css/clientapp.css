@@ -1,0 +1,85 @@
+/*Main Css for email collection*/
+
+/*Page layout*/
+.bodywrapper {
+	width:1024px; 
+	margin: 20px auto;
+	font: normal 14px/14px Arial,Helvetica,sans-serif;
+}
+
+.displaywrapper h1 {
+	font: bold 18px/18px Arial,Helvetica,sans-serif;
+	border-bottom: 2px dotted #d4d4d4;
+	padding:0 0 10px
+}
+
+/*Email list layout*/
+.displaywrapper .sectionheader .col {
+	font-weight: bold;
+	float:left;
+	width:25%;
+	text-transform:uppercase;
+	padding:0 0 10px;
+}
+
+.displaywrapper .emaillist {
+	border-bottom: 2px dotted #d4d4d4;
+	float:left;
+	width:100%;
+	padding:0 0 10px;
+}
+
+.displaywrapper .col {
+	float:left;
+	width:25%;
+}
+
+.displaywrapper ul {
+	padding:0;
+	margin:0;
+}
+
+.displaywrapper ul li {
+	width:100%;
+	float:left;
+	padding:5px 0;
+	list-style-type: none;
+}
+
+/*Modal Form*/
+.formwrapper {
+	padding:0 20px;
+	float:left;
+	width: 100%;
+}
+
+.formwrapper .col {
+	float:left;
+	width:50%;
+margin-bottom:20px;
+}
+
+.formwrapper h2 {
+	font: bold 14px/14px Arial,Helvetica,sans-serif;
+	float:left;
+	width:100%;
+	padding-bottom:5px;
+}
+
+.formwrapper input {
+	margin-left:7px;
+	width:65%;
+}
+
+.formwrapper .errormsg {
+	color: red;
+	margin-top: 5px;
+	float:left;
+	font-size:12px;
+}
+
+/*Open Form*/
+.submitwrapper button {
+	float: right;
+	margin:10px 0;
+}
